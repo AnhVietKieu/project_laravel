@@ -18,31 +18,5 @@ class welcome extends Controller
 		}
 
 		public function cart()
-		{
-			Cart::add([
-				['id' => '293ad', 'name' => 'Product 2', 'qty' => 2, 'price' => 10.00, 'weight' => 550],
-				['id' => '4832k', 'name' => 'Product 3', 'qty' => 1, 'price' => 10.00, 'weight' => 550, 'options' => ['size' => 'large']]
-				]);
-
-			return view('cart');
-		}
-		public function login()
-		{
-			return view('login');
-		}
-		public function postlogin(Request $requests)
-		{
-			$arr = array(
-    		'name' => $requests->name,
-    		'password' => $requests->password
-    		);
-
-    	if(Auth::attempt($arr))
-    	{
-    		return redirect('cart');
-    	}else
-    	{
-    		echo "that bai";
-    	}
-		}
+		
 }
